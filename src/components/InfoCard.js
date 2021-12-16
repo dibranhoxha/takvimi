@@ -15,10 +15,10 @@ const InfoCard = ({ remainingTime, list }) => {
     const [newList, setNewList] = useState(list);
 
     const changeAlarmActive = (id) => {
-        const changedList = newList.map((item) =>
+        const _list = newList.map((item) =>
             item.id === id ? { ...item, active: !item.active } : { ...item }
         );
-        setNewList(changedList);
+        setNewList(_list);
     };
     return (
         <View style={[styles.card, styles.shadowProp]}>
@@ -53,7 +53,12 @@ const InfoCard = ({ remainingTime, list }) => {
                         padding: 5,
                     }}
                 >
-                    <Text style={{ fontSize: 18 }}>...</Text>
+                    <TouchableOpacity>
+                        <Image
+                            style={{ width: 22, height: 22 }}
+                            source={require("../../assets/images/details.png")}
+                        />
+                    </TouchableOpacity>
                 </View>
             </View>
             <View style={{ padding: 10 }}>

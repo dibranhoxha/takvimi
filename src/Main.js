@@ -1,10 +1,7 @@
 import React from 'react'
 import { View, Text, TouchableOpacity, Alert, Dimensions } from 'react-native'
-import AppButton from './components/Button'
 import Header from './components/Header'
 import InfoCard from './components/InfoCard'
-
-const {width, height } = Dimensions.get('window')
 
 const Main = () => {
 
@@ -22,7 +19,6 @@ const Main = () => {
             <View>
                 <Header />
                 <InfoCard remainingTime={'1 hour 34 minutes left'} list={list}/>
-            {/* <AppButton width={0.5*width} title="test" onPress={() => Alert.alert('you clicked test')}/> */}
             </View>
         </View>
     )
